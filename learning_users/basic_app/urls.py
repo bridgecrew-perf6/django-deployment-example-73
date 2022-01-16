@@ -1,11 +1,10 @@
-from django.conf.urls import url
-from basic_app import views
+from django.urls import path
+from basic_App import views
 
-# SET THE NAMESPACE!
-app_name = 'basic_app'
+app_name = 'basic_App'
 
-# Be careful setting the name to just /login use userlogin instead!
-urlpatterns=[
-    url(r'^register/$',views.register,name='register'),
-    url(r'^user_login/$',views.user_login,name='user_login'),
+urlpatterns = [       
+    path('register/',views.register,name='register'),
+    path('user_login/',views.user_login,name='user_login'),
 ]
+
